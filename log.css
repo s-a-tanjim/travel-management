@@ -1,0 +1,32 @@
+*{color:#fff;}
+body{
+    font-family: 'Roboto' ,sans-serif;
+    background-image:linear-gradient(rgba(45, 141, 145, 0.5),rgba(21, 48, 66, 0.5)), url(img/london2.jpg);
+    background-size: cover;
+    height: 160vh;
+}
+
+@media(max-width : 768px){
+    .form-container{border:1px solid #fff ; padding: 50px 60px; margin-top:20vh;-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+}
+.form-container{border:1px solid #fff ; padding: 50px 60px; margin-top:20vh;-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+   margin-top: 160px;
+   
+}
+.form-container h1{
+    text-align: center;
+    color:black;
+}
+
+
+.forgot a{
+    color:#c2fbfe;
+}
+.forgot a:hover,:focus{
+    color: #25a890;
+}

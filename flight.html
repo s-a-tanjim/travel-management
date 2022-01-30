@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>flight_booking</title>
+
+	<link rel="stylesheet" href ="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+	<link rel = "stylesheet" href="footer.css">
+	<link rel = "stylesheet" href="flight.css">
+	<link rel = "stylesheet" href="navbar.css">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+</head>
+      
+<header>
+
+	<div id ="navigation">
+   
+	<div class="hamburger" id="hamburger">
+	  <div class="line"></div>
+	  <div class="line"></div>
+	  <div class="line"></div>
+	</div>
+
+	<ul class="nav-links" id="nav-links">
+	
+		<li  ><a href="./index.html">HOME</a></li>
+		<li><a href="tour package.html">Tour Packages</a></li>
+		<li><a href="hotel.html">Hotel</a></li>
+		<li class="active"><a href="#">Flight</a></li>
+	
+		<li ><a href="log.html" class="btn btn-warning" id="Log_in">Log in</button></a></li>
+	
+		<button type="button" class="btn btn-warning" id = "Log_out" style="display:none">Log Out</button>
+		<li><a href="contact.html">Contact</a></li>
+		<div class="dropdown ">
+			<a href="./settings.html"><button class="dropbtn" id="account">Account
+					
+				<i class="fa fa-fw fa-user"></i>
+			  
+			</button> </a>
+		  </div>
+		
+	 
+	</ul>
+	</div>
+  
+  
+</header>
+  
+<body>
+	<br>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+						<h1> FLIGHT BOOKING </h1>
+					<div class="booking-form">
+						<form id="flight_form">
+							<div class="form-group">
+								<div class="form-checkbox">
+									<label for="roundtrip">
+										<input type="radio" id="roundtrip" name="flight-type">
+										<span></span>Roundtrip
+									</label>
+									<label for="one-way">
+										<input type="radio" id="one-way" name="flight-type">
+										<span></span>One way
+									</label>
+									<label for="multi-city">
+										<input type="radio" id="multi-city" name="flight-type">
+										<span></span>Multi-City
+									</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Name</span>
+								
+										<input class="form-control" id="flight-name" type="text" placeholder="Enter Your Name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Email</span>
+										<input class="form-control" id="flight-email" type="text" placeholder="Enter your Email">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Flying from</span>
+											<input class="form-control" id="from" type="text" placeholder="City or airport">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<span class="form-label">Flyning to</span>
+											<input class="form-control" id="to" type="text" placeholder="City or airport">
+										</div>
+									</div>
+								</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Departing</span>
+										<input class="form-control" id="deperture" type="date" required>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Returning</span>
+										<input class="form-control" id="return" type="date" required>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label">Adults (18+)</span>
+										<select class="form-control" id="adult">
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<span class="form-label" >Children (0-17)</span>
+										<select class="form-control" id="children">
+											<option value ="">0</option>
+											<option value ="">1</option>
+											<option value ="">2</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Travel class</span>
+										<select class="form-control" id="class">
+											<option>Economy class</option>
+											<option>Business class</option>
+											<option>First class</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-btn">
+										<button class="submit-btn"id="submit" >Submit</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+
+	<footer class="ct-footer">
+		<div class="container">
+			
+			<ul class="ct-footer-list text-center-sm">
+				<li>
+					<h2 class="ct-footer-list-header">
+						Learn More
+					</h2>
+					<ul>
+					
+						<li>
+							<a href="#features">feature-details</a>
+						</li>
+						<li>
+							<a href = "#gallary=">gallary</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2 class="ct-footer-list-header">
+						Services
+					</h2>
+					<ul>
+					
+						<li>
+							<a href="hotel.html">Hotel</a>
+						</li>
+						<li>
+							<a href="flight.html">Flights</a>
+						</li>
+					
+					</ul>
+				</li>
+				
+	
+			
+				<li>
+					<h2 class="ct-footer-list-header">
+						About
+					</h2>
+					<ul>
+						<li>
+							<a href="contact.html">FAQ</a>
+						</li>
+					
+						<li>
+							<a href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2 class="ct-footer-list-header">
+						Copyrigtht
+					</h2>
+					<ul>
+					
+						<li>
+							<a href="#">Protik</a>
+						</li>
+					
+					</ul>
+				</li>
+			</ul>
+			</div>
+	</footer>
+
+	<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+	
+	<script src ="firebase.js"></script><!-- FireBase End-->	
+
+	<script src="app.js"></script>
+	<script src ="flight.js"></script>
+	
+</body>
+</html>

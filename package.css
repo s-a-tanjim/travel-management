@@ -1,0 +1,18 @@
+* {
+    font-family: sans-serif; /* Change your font family */
+    
+  }
+  body{
+    background-image:linear-gradient(rgba(45, 141, 145, 0.5),rgba(21, 48, 66, 0.5));
+   
+   
+  }
+  
+.container {
+  padding: 1rem 0rem ,-5rem,-5rem ;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
