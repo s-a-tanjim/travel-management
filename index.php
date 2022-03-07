@@ -26,9 +26,9 @@ include_once './common/navbar.php';
       width: 40%;
     }
   </style>
-  <form>
-    <input type="text" id="khoj" placeholder="Search.." name="search">
-    <button type="button" class="btn btn-info" id="search">
+  <form method="POST" action="./search.php">
+    <input type="text" id="khoj" placeholder="Search.." name="search-key">
+    <button type="submit" name="search-submit" class="btn btn-info" id="search">
       <span class="glyphicon glyphicon-search"></span> Search
     </button>
   </form>

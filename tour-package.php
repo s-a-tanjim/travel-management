@@ -1,10 +1,16 @@
 <?php
+session_start();
 echo '<html>';
 include_once './common/header.php';
 include_once './common/navbar.php';
 ?>
 <link rel="stylesheet" href="package.css">
+<?php
+  include_once './db/db_config.php';
 
+  $sql = 'SELECT * FROM packages';
+  $result=mysqli_query($conn, $sql);
+?>
 <br>
 <br> <br> <br> <br> <br>
 <P>TOUR PACKAGES</P>
@@ -33,103 +39,25 @@ include_once './common/navbar.php';
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <?php
+            while ($record = mysqli_fetch_array($result)) {
+              echo '<tr>
+              <td class="w-25">
+                <a href="'.$record['page_url'].'" style="margin-left: -5px;">
+                  <img src="'.$record['img_url'].'" ; class="img-fluid img-thumbnail" alt="Sheep">
+              </td>
+              <td>
+                <h3>'.$record['city'].'</h3>'.$record['description'].'
+              </td>
+              <td>'.$record['days'].'</td>
+              <td>'.$record['flight'].'</td>
+              <td>'.$record['hotel'].'</td>
+              <td>'.$record['cost'].'</td>
+            </tr>
+              ';
+            }
+          ?>
 
-            <td class="w-25">
-
-              <a href="london.html" style="margin-left: -5px;">
-                <img src="img/london1.jpg" ; class="img-fluid img-thumbnail" alt="Sheep">
-            </td>
-            <td>
-              <h3>LONDON</h3>Lorem ipsum dolor sit amet consectetur, adipislaborio
-            </td>
-            <td>3 days 2 nights </td>
-            <td>Emirats</td>
-            <td>Radison</td>
-            <td>230$</td>
-          </tr>
-          <tr>
-            <td class="w-25">
-
-              <a href="las angels.HTML" style="margin-left: -5px;">
-                <img src="img/losangels.jpg" ; class="img-fluid img-thumbnail" alt="Sheep">
-            </td>
-            <td>
-              <h3>LOS ANGELES </h3>
-              Lorem ipsum dolor sit amet consectetur, adipislaborio
-            </td>
-            <td>3 days 2 nights </td>
-            <td>Emirats</td>
-            <td>PAB STRA</td>
-            <td>200$</td>
-          </tr>
-          <tr>
-            <td class="w-25">
-              <a href="paris.html" style="margin-left: -5px;">
-                <img src="img/paris2.jpg" ; class="img-fluid img-thumbnail" alt="Sheep">
-            </td>
-            <td>
-              <h3>PARIS</h3>
-              Lorem ipsum dolor sit amet consectetur, adipislaborio
-            </td>
-            <td>3 days </td>
-            <td>Saudia airways</td>
-            <td>deMUTA</td>
-            <td>250$</td>
-          </tr>
-          <tr>
-            <td class="w-25">
-              <a href="russia.html" style="margin-left: -5px;">
-                <img src="img/russia.jpg" ; class="img-fluid img-thumbnail" alt="Sheep">
-            </td>
-            <td>
-              <h3>RUSSIA</h3>
-              RUSSIALorem ipsum dolor sit amet consectetur, adipislaborio DSFSDF SDFSDFWEIEIOF SDFAEDFISDAIJ
-            </td>
-            <td>3 days</td>
-            <td>turkey airlines</td>
-            <td>decoy malaya</td>
-            <td>220$</td>
-          </tr>
-          <tr>
-            <td class="w-25">
-              <a href="paris.html" style="margin-left: -5px;">
-                <img src="img/swiz.jpg" ; class="img-fluid img-thumbnail" alt="Sheep">
-            </td>
-            <td>
-              <h3>Switcherland</h3>Lorem ipsum dolor sit amet consectetur, adipislaborio JJNJJFNEWKJNJKNJK SJKD
-            </td>
-            <td>4 days 3 nights</td>
-            <td>Emirats</td>
-            <td> FROSTRA</td>
-            <td>250$</td>
-          </tr>
-          <tr>
-          <tr>
-            <td class="w-25">
-              <img src="img/florence-1066314_1920.jpg" class="img-fluid img-thumbnail" alt="Sheep">
-            </td>
-            <td>
-              <h3>Switcherland</h3>Lorem ipsum dolor sit amet consectetur, adipislaborio JJNJJF
-            </td>
-            <td>4 days 3 nights</td>
-            <td>Emirats</td>
-            <td> FROSTRA</td>
-            <td>390$</td>
-          </tr>
-          <tr>
-            <td class="w-25">
-              <img src="img/london3.jpg" class="img-fluid img-thumbnail" alt="Sheep">
-            </td>
-            <td>
-              <h3>Switcherland</h3>Lorem ipsum dolor sit amet consectetur, adipislaborio JJNJJFNE
-            </td>
-            <td>4 days 3 nights</td>
-            <td>Emirats</td>
-            <td> FROSTRA</td>
-            <td>230$</td>
-          </tr>
-          <tr>
         </tbody>
       </table>
     </div>

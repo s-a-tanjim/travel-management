@@ -24,38 +24,38 @@ include_once './common/navbar.php';
         </div>
       </div>
       <div class="col-md-9">
-        <div class="contact-form" id="contact-form">
+        <form class="contact-form" id="contact-form" action="./db/db_contact.php" method="POST">
           <div class="form-group">
-            <label class="control-label col-sm-2" for="name">Name:</label>
+            <label class="control-label col-sm-2" for="contact-name">Name:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="contact-name" placeholder="Enter Name" name="fname">
+              <input type="text" class="form-control" id="contact-name" placeholder="Enter Name" name="name" required>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-2" for="email">Email:</label>
+            <label class="control-label col-sm-2" for="contact-email">Email:</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="contact-email" placeholder="Enter email" name="email">
+              <input type="email" class="form-control" id="contact-email" placeholder="Enter email" name="email" required>
             </div>
           </div>
           <div class="form-group">
             <label class="control-label col-sm-2" for="subject">subject:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="subject" placeholder="Enter topic name" name="lname">
+              <input type="text" class="form-control" id="subject" placeholder="Enter topic name" name="subject" required>
             </div>
           </div>
           <div class="form-group">
-            <label class="control-label col-sm-2" for="comment">Query:</label>
+            <label class="control-label col-sm-2" for="comment">Message:</label>
             <div class="col-sm-10">
-              <textarea class="form-control" rows="5" id="comment"></textarea>
+              <textarea class="form-control" rows="5" id="comment" name="message" required></textarea>
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-default" id="submit">Submit</button>
+              <button type="submit" name="submit" class="btn btn-default" id="submit">Submit</button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

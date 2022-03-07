@@ -58,7 +58,7 @@
       </h2>
       <ul>
         <li>
-          <a href="#">Protik</a>
+          <a href="#">Dev Team</a>
         </li>
       </ul>
     </li>
